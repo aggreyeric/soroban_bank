@@ -1,11 +1,11 @@
 # soroban_bank
 
-## Project Structure
+## Run Steps 
 
 1. Clone Repo
 
 ```sh  
-git clone https://github.com/aggreyeric/soroban_bank 
+git clone https://github.com/aggreyeric/soroban_bank.git
 ```
 
 2.  Build Contract
@@ -23,10 +23,21 @@ stella contract build
 
 stellar contract deploy --wasm  hello_world.wasm --source NET_ID --network testnet 
 
-
+# generates contract ID 
 
   ```
 
+
+4. RUN with deno
+
+```sh 
+
+ deno run  --allow-all main.ts
+
+```
+
+
+## Project Structure
 
 
 This repository uses the recommended structure for a Soroban project:
