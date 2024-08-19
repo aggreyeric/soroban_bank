@@ -2,15 +2,32 @@
 
 ## Project Structure
 
-1.  Build Contract
+1. Clone Repo
+
+```sh  
+git clone https://github.com/aggreyeric/soroban_bank 
+```
+
+2.  Build Contract
 ```sh
 
-stellar contract deploy --wasm  hello_w
-orld.optimized.wasm --source eric --network testnet 
-CC7FPIPJNE7NMZGL5IWLSYGHQMXV25SDR6QR23GN2GR5EQYKVHGJSIQZ
+stella contract build
 
 
 ```
+
+3.  Deploy Contract
+
+```sh 
+
+
+stellar contract deploy --wasm  hello_world.wasm --source NET_ID --network testnet 
+
+
+
+  ```
+
+
 
 This repository uses the recommended structure for a Soroban project:
 ```text

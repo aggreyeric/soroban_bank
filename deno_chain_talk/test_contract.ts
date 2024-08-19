@@ -8,7 +8,7 @@ import { Contract, SorobanRpc, TransactionBuilder, Networks,
 
 let rpcUrl = "https://soroban-testnet.stellar.org"
 
-let contractAddress = 'CC7FPIPJNE7NMZGL5IWLSYGHQMXV25SDR6QR23GN2GR5EQYKVHGJSIQZ'
+let contractAddress = 'CC7FPIPJNE7NMZGL5IWLSYBVNMd25SDR6QR23GN2GR5EQYKVHGJSIQZ'
 
 
 let params = {
@@ -40,7 +40,7 @@ const numberToU64= (value) => {
 
 
 export async function contractInt(functName, values) {
-    const kp = Keypair.fromSecret("SCD5BHD4NPBH24J2G6EVIBNSMWHOSGX7J3K6QXCZYDWUEMQJOXXYDOFB");
+    const kp = Keypair.fromSecret("SCD5BHD4NPBH24J2G6EVIBNBSMWHOSGX7Jddw3K6QXCZYDWUEMQJOXXYDOFB");
     const caller = kp.publicKey();
     const provider = new SorobanRpc.Server(rpcUrl, { allowHttp: true });
     const sourceAccount = await provider.getAccount(caller);
@@ -80,7 +80,7 @@ export async function contractInt(functName, values) {
 
 
 export async function initialize() {
-    let admin = accountToScVal("GA7KOUZLPX7T45WLNYY6KFZZGJYMNI4H5J5TN3HHSVGL5BFQ4YCTQ4QR")
+    let admin = accountToScVal("GA7KOUZLPX7T45WLNNYY6KFZZGJYMNI4H5J5TN3HHSVGL5BFQ4YCTQ4QR")
     let values = [admin]
     let result = await contractInt('init', values);
     console.log(result)
@@ -89,7 +89,7 @@ export async function initialize() {
 
 
 export async function create_account() {
-    let person = accountToScVal("GA7KOUZLPX7T45WLNYY6KFZZGJYMNI4H5J5TN3HHSVGL5BFQ4YCTQ4QR")
+    let person = accountToScVal("GA7KOUZLPX7T45WLNYNY6KFZZGJYMNI4H5J5TN3HHSVGL5BFQ4YCTQ4QR")
     let amount  = numberToI128(10)
     let values = [person, amount]
     let result = await contractInt('create_account', values);
