@@ -2,6 +2,16 @@
 
 ## Project Structure
 
+1.  Build Contract
+```sh
+
+stellar contract deploy --wasm  hello_w
+orld.optimized.wasm --source eric --network testnet 
+CC7FPIPJNE7NMZGL5IWLSYGHQMXV25SDR6QR23GN2GR5EQYKVHGJSIQZ
+
+
+```
+
 This repository uses the recommended structure for a Soroban project:
 ```text
 .
